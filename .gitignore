@@ -1,0 +1,22 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtuelle miljøer
+.venv/
+venv/
+
+# Miljøvariabler
+.env
+
+# Lokal database
+db/
+*.sqlite
+
+# Git-metadata i underprosjekter (hvis noen pakker zip osv)
+.git/
+
+# OS-støy
+.DS_Store
+Thumbs.db

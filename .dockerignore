@@ -1,0 +1,21 @@
+# Python cache og midlertidige filer
+__pycache__/
+*.pyc
+*.pyo
+
+# Git-repo
+.git/
+
+# Miljøvariabler og hemmelige filer
+.env
+
+# Lokal database (brukes via volume i Compose)
+db/
+*.sqlite
+
+# Virtuelle miljøer (hvis noen har det lokalt)
+.venv/
+venv/
+
+# Smidig IT-2 © TIP AS, 2026 
+

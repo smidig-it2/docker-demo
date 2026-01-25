@@ -1,0 +1,23 @@
+# Navn på prosjektet (stacken) som vises i Docker Desktop
+name: dash-demo
+
+services:
+  # Navn på tjenesten (standard: app)
+  app:
+    # Navn på imaget som bygges og brukes
+    image: flask-dash-sqlite-app
+    # Bygg image fra Dockerfile i samme mappe
+    build: .
+    # Åpne port 5000 i containeren og på vertsmaskinen
+    ports:
+      - "5000:5000"
+    # Miljøvariabler tilgjengelige i containeren
+    environment:
+      DB_PATH: /app/db/flask.sqlite
+    # Monter lokal mappe ./db til /app/db for å lagre databasefilen
+    volumes:
+      - ./db:/app/db
+    # Start containeren på nytt automatisk hvis den stopper
+    restart: unless-stopped
+
+# Smidig IT-2 © TIP AS, 2026
